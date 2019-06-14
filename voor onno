@@ -1,0 +1,36 @@
+// DNA complemententaire string (LET OP, OM DE CODE TE LATEN WERKEN MOET JE OP LIJN 22 DNA INVOEREN TUSSEN DE HAAKJES IN)
+
+function dnaStrand(str){                          // de volledige functie
+var split = str.toLowerCase().split('');
+var arr = [];
+for(var i = 0; i < split.length; i++){           // voor var i wordt een letter op plek 1 vervangen
+ if(split[i] === 'a'){                           // a wordt t (pusht hier de t)
+   arr.push('t');                                
+ } else if (split[i] === 't'){                   // t wordt a (pusht hier de a)
+   arr.push('a');
+ } else if (split[i] === 'c'){                   // c wordt g (pusht hier de g)
+   arr.push('g');
+ } else if (split[i] === 'g'){                   // g wordt c (pusht hier de c)
+   arr.push('c');
+ } else {                                        // Andere letters werken niet            
+   return window.alert("Hey niet flauw doen Onno. Je weet ook dat dat niet kan")
+ }
+}
+var newStr = arr.join('');
+return newStr.toUpperCase();            // verandert de string naar hoofdletter in de console
+}
+var dna = "VERANDER DIT"                     // VERANDER DE BINNEKANT VAN DNA        
+var a = dnaStrand(dna);                 
+var length = a.length;                       // Lengte van de dna string
+var str= a;
+str = str.split("");            // Convert het DNA naar een array
+str = str.reverse();            // Reverses de DNA string 
+str = str.join("");             // Plakt de waarden weer samen                                          
+console.log("DNA sequentie:_________________|" + dna); // Wat er in de console komt
+console.log("Complementaire DNA sequentie:__|" + a);
+console.log("Complentair reverse sequentie:_|" + str); 
+console.log("Aantal DNA moleculen:___" + length)                              
+console.log("Aantal Triplets:________" + length/3.);             
+ 
+                          
+// De dnaStrand zoekt de code op binnen de functie, en pusht vervolgens die letters naar voren. Deze komen altijd terug in hoofdletters
